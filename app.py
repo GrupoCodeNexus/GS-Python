@@ -1,3 +1,12 @@
+# Dashboard de Monitoramento Climático com Streamlit
+
+# Desenvolvido por:
+# Francisco Vargas - RM560322
+# Matheus Eiki - RM559483
+# Kayque Carvalho - RM561189
+
+
+# importando bibliotecas necessárias
 import streamlit as st
 import pandas as pd
 
