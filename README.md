@@ -4,7 +4,8 @@
 Monitoramento e alertas por meio da análise de dados visando prever enchentes e fortes tempestades.
 
 ## 🔗 Links úteis
-- Vídeo da solução:
+- Vídeo da solução: https://www.youtube.com/watch?v=sMDrpt4FP5s
+- Vídeo do pitch (storytelling): https://www.youtube.com/watch?v=y2LbI23e794
 
 ## 💻 Tecnologias Utilizadas:
 - Python

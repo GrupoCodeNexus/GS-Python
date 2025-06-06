@@ -10,11 +10,12 @@
 import streamlit as st
 import pandas as pd
 
-# Limiares de alerta
+# Limiares de alerta (temperatura e chuva)
 LIMIAR_TEMPERATURA = 40
 LIMIAR_CHUVA = 50
 
 # Configuração da página
+# Setando o título e o layout da página
 st.set_page_config(page_title="Dashboard de Monitoramento Climático", layout="wide")
 
 # Título da página
@@ -26,6 +27,8 @@ st.markdown("---")
 st.markdown("## 📁 Envio de Planilha")
 uploaded_file = st.file_uploader("Envie o arquivo Excel (.xlsx) com os dados climáticos", type=["xlsx"])
 
+# Verifica se o arquivo foi enviado
+# Se o arquivo foi enviado, tenta ler os dados e processá-los
 if uploaded_file:
     try:
         # Leitura dos dados
@@ -81,8 +84,9 @@ if uploaded_file:
             df.set_index("Tempo", inplace=True)
 
             st.line_chart(df[["Temperatura (°C)", "Chuva (mm)"]])
-
+    # exceção para erros de leitura
     except Exception as e:
         st.error(f"❌ Erro ao ler o arquivo: {e}")
+# else serve para verificar se o arquivo foi enviado, se não, exibe uma mensagem de aviso
 else:
     st.warning("⬆️ Envie um arquivo Excel para iniciar a análise.")
